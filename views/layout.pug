@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/chat.css')
+    link(rel='stylesheet', href='/stylesheets/users.css')
+    script(src='http://127.0.0.1:5000/socket.io/socket.io.js')
+    script(src='https://kit.fontawesome.com/ef9d457797.js' crossorigin="anonymous")
+  body
+    block content
+    block scripts

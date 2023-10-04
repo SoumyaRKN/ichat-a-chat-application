@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  header.msger-header
+    p Chat Seamlessly
+
+  main#msger-chat
+
+  form#msger-inputarea
+    input#msger-input(type="text" placeholder="Enter your message...")
+    button#msger-send-btn(type="submit") Send
+
+block scripts
+  script(src="/javascripts/chatRoom.js")

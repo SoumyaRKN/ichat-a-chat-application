@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  #myModal.modal
+    .modal-content
+        span.close &times;
+        #chatBox
+          header#privateChatHeader
+            p#phead Private Chat
+            input#pSocketId(type="hidden")
+
+          main#privateChat
+
+          form#privateChatInputArea
+            input#privateChatInput(type="text" placeholder="Enter your message...")
+            button#privateChatSendBtn(type="submit") Send
+
+  h1.title= title
+  .container
+      #usersContainer
+        p.sub-title Online Users
+        #usersList
+
+block scripts
+  script(src="/javascripts/users.js")

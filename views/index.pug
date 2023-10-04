@@ -1,0 +1,52 @@
+extends authLayout
+
+block content
+  .cont
+    form.form.sign-in#loginForm
+      h2 Welcome to #{title}
+      label
+        span Email
+        input(type="email" id="loginEmail" placeholder="name@company.com")
+      label
+        span Password
+        input(type="password" id="loginPassword" placeholder="******")
+      p.forgot-pass
+        a(href="forget-password") Forgot password?
+      button(type="submit" class="submit") Sign In
+    .sub-cont
+      .img
+        .img__text.m--up
+          h3 Don't have an account? Please Sign up!
+        .img__text.m--in
+          h3 If you already have an account, just sign in.
+        .img__btn
+          span.m--up Sign Up
+          span.m--in Sign In
+      form.form.sign-up#signupForm
+        h2 Create your Account
+        label
+          span User Name
+          input(type="text" id="signUpName" placeholder="John Doe" required)
+        label
+          span Email
+          input(type="email" id="signUpEmail" placeholder="name@company.com" required)
+        label
+          span Phone
+          input(type="text" id="signUpPhone" placeholder="9999999999" required)
+        label
+          span Password
+          input(type="password" id="signUpPassword" placeholder="******" required)
+        label
+          span Confirm Password
+          input(type="password" id="signUpcPassword" placeholder="******" required)
+        button(type="submit" class="submit") Sign Up
+
+  script.
+    document.querySelector('.img__btn').addEventListener('click', function() {
+        document.querySelector('.cont').classList.toggle('s--signup');
+    });
+
+block scripts
+  script(src="/javascripts/auth.js") 
+
+
