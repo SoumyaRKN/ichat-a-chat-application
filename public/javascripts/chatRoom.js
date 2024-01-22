@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userName = localStorage.getItem("userName");
     const notifyAudio = new Audio("/notify.mp3");
     const chatAudio = new Audio("/chat.mp3");
-    const socket = io("http://127.0.0.1:5000", {
+    const socket = io("http://172.24.7.45:5000", {
         query: { name: userName }
     });
 
