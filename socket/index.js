@@ -6,7 +6,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://127.0.0.1:3000',
+        origin: '*',
         methods: ['GET', 'POST'],
     },
 });
